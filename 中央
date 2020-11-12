@@ -288,7 +288,7 @@ class Bot {
 
             case 242:
                 console.log(`Bot_${this.id}: Spawning`);
-                window.agarApp.recaptcha.requestCaptchaV3('play', token => this.spawn(this.botNick + 'Mirai', token));
+                window.agarApp.recaptcha.requestCaptchaV3('play', token => this.spawn('Mirai', token));
                 break;
 
             case 85:

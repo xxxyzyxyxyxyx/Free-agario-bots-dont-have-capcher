@@ -105,11 +105,11 @@ class Client {
     addEventListener() {
         document.addEventListener('keydown', event => {
             let key = String.fromCharCode(event.keyCode);
-            if (key == 'Q') {
+            if (key == 'X') {
                 this.splitBots();
-            } else if (key == 'A') {
+            } else if (key == 'C') {
                 this.ejectBots();
-            } else if (key == 'X') {
+            } else if (key == 'P') {
                 if (this.authorized) return this.send(new Uint8Array([5]));
                 this.collectPellets = !this.collectPellets
                 console.log(`Collect Pellets: ${this.collectPellets}`);
@@ -159,7 +159,7 @@ class Client {
         <center><button id="toggleButton" onclick="window.client.startBots(localStorage.getItem('botAmount'));" class="btn btn-success">Start Bots</button></center>
         `);
         if (!localStorage.getItem('botAmount')) localStorage.setItem('botAmount', 10);
-        if (!localStorage.getItem('botNick')) localStorage.setItem('botNick', 'Mirai');
+        if (!localStorage.getItem('botNick')) localStorage.setItem('botNick', 'Sanik');
         console.log('[AgarUnlimited] Ready!');
     }
 
